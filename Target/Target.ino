@@ -73,6 +73,9 @@ void setup() {
 
   Init_Hx710();
   Get_Maopi();   //clear the weight
+
+  // Display
+  display_setup();
 }
 
 void loop() {
@@ -125,6 +128,10 @@ void loop() {
 
   tick_minute++;
   delay(delaytime);                             //  take a break
+
+
+  // Display
+  display_loop();
 }
 
 void ledFadeToBeat() {
